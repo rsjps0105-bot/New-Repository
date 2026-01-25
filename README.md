@@ -57,8 +57,9 @@
   - この経験を通して、仕様を整理しながらデバッグし、修正できる力を身につけました。
 
 ## 使用技術
-- Unity：[バージョン]
+- Unity：6000.2.14f1
 - 言語：C#
+- 開発環境：Unity Editor / Visual Studio
 - 主要機能：[例：CharacterController / Animator / ScriptableObject / UI / Coroutine など]
 
 ## 実行方法
