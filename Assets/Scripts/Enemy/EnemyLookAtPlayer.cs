@@ -1,11 +1,11 @@
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
+// 敵の視点操作
 public class EnemyLookAtPlayer : MonoBehaviour
 {
-    Transform player;   // プレイヤー
-    public Transform model;    // 見た目だけ（子）
-
+    Transform player;   
+    public Transform model;   
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player")?.transform;

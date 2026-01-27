@@ -32,9 +32,14 @@ public class EnemyThrow : MonoBehaviour
 
         anim.SetTrigger("Throw");
 
-        ball.Throw(
-            holdPoint.position,
-            target.position
-        );
+        //ball.Throw(
+        //    holdPoint.position,
+        //    target.position
+        //);
+    }
+
+    public void OnThrowEvent()
+    {
+        ball.Throw(holdPoint.position, target.position);
     }
 }

@@ -6,12 +6,6 @@ public class PlayerLook : MonoBehaviour
     [SerializeField] float mouseSensitivity = 100f;
     private float xRotation = 0f;
 
-    void Start()
-    {
-        //Cursor.lockState = CursorLockMode.None;
-        //Cursor.visible = true;
-    }
-
     void Update()
     {
         if (Time.timeScale == 0f) return;

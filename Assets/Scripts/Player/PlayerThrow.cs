@@ -3,7 +3,13 @@
 public class PlayerThrow : MonoBehaviour
 {
     [Header("投げる用ボール")]
-    [SerializeField] NormalBall ballPrefab; // Prefab に手元ボールや投げる用ボールをセット
+    [SerializeField] MonoBehaviour ballBehaviour;
+    IThrowable ball;
+
+    void Awake()
+    {
+        ball = ballBehaviour as IThrowable;
+    }
 
     [Header("プレイヤーカメラと手の位置")]
     [SerializeField] Camera playerCamera;
@@ -15,11 +21,11 @@ public class PlayerThrow : MonoBehaviour
 
         Vector3 dir = playerCamera.transform.forward;
 
-        // カメラが実際より少し上を見ている補正
-        dir.y += 0.5f;   // ← ここを調整（0.1〜0.4くらい）
+        // 投げる高さを調整
+        dir.y += 0.5f;  
 
         dir.Normalize();
 
-        ballPrefab.Throw(holdPoint.position, dir);
+        ball.Throw(holdPoint.position, dir);
     }
 }

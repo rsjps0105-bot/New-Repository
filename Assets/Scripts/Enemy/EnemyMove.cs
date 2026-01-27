@@ -1,6 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
+
 public class EnemyMove : MonoBehaviour
 {
     [Header("ˆÚ“®İ’è")]
@@ -37,7 +38,6 @@ public class EnemyMove : MonoBehaviour
             timer = 0f;
         }
 
-        // ˆÚ“®
         Vector3 move = Vector3.right * moveDirection * moveSpeed;
         controller.Move(move * Time.deltaTime);
 

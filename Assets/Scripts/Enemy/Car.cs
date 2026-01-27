@@ -10,6 +10,7 @@ public class Car : MonoBehaviour
     }
 
 
+    // プレイヤー、敵に当たった時ダメージ
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("Trigger hit: " + other.name);

@@ -2093,6 +2093,10 @@ PrefabInstance:
       propertyPath: ballPrefab
       value: 
       objectReference: {fileID: 1388169709}
+    - target: {fileID: 242518071041635551, guid: bac3a35018c12a34895c65f48b9c6a20, type: 3}
+      propertyPath: ballBehaviour
+      value: 
+      objectReference: {fileID: 1388169709}
     - target: {fileID: 734173891965609199, guid: bac3a35018c12a34895c65f48b9c6a20, type: 3}
       propertyPath: m_Name
       value: Player

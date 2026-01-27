@@ -1,6 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
+
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float speed = 5f;
@@ -21,7 +22,6 @@ public class PlayerMovement : MonoBehaviour
     {
         float h = Input.GetAxis("Horizontal");
 
-        // ‰¡ˆÚ“®
         Vector3 move = Vector3.right * h * speed;
 
         // d—Íˆ—
