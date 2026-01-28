@@ -381,8 +381,8 @@ GameObject:
   - component: {fileID: 8345987919812610701}
   - component: {fileID: 3765344377276469053}
   - component: {fileID: 3253170265519540119}
+  - component: {fileID: 3723906987546372324}
   - component: {fileID: 2475940204596092748}
-  - component: {fileID: 9043853358555812846}
   - component: {fileID: 3779204285813298927}
   - component: {fileID: 1449106142309091319}
   - component: {fileID: 7769125869107047792}
@@ -460,6 +460,18 @@ CapsuleCollider:
   m_Height: 2.758339
   m_Direction: 1
   m_Center: {x: 0, y: 0.2830782, z: 0}
+--- !u!114 &3723906987546372324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8593408088190734431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e6122da0a7304b4db06772964c648d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
 --- !u!114 &2475940204596092748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,18 +486,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHp: 2
   hpText: {fileID: 1399649973315295446}
---- !u!114 &9043853358555812846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8593408088190734431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 424ec82b76088fc429bf469d1b744d33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Enemy
 --- !u!114 &3779204285813298927
 MonoBehaviour:
   m_ObjectHideFlags: 0

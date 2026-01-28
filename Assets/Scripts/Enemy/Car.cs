@@ -9,8 +9,6 @@ public class Car : MonoBehaviour
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 
-
-    // プレイヤー、敵に当たった時ダメージ
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("Trigger hit: " + other.name);

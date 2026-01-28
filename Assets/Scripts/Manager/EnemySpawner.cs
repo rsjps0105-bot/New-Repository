@@ -61,7 +61,7 @@ public class EnemySpawner : MonoBehaviour
     void TrySpawnEnemy()
     {
         // ★ 上限チェック
-        int currentEnemyCount = FindObjectsOfType<Enemy>().Length;
+        int currentEnemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
         if (currentEnemyCount >= maxEnemyCount)
             return;
 

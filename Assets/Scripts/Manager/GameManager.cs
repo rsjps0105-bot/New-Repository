@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] Text resultText;
-    [SerializeField] Text killCountText;   // ★ 常時表示用
+    [SerializeField] Text killCountText;   //  常時表示用
 
     bool isGameEnd = false;
     int killCount = 0;
@@ -35,12 +35,6 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.G))
-        //{
-        //    upgradeManager?.ApplyRandomUpgrade();
-        //    Debug.Log("Debug: ApplyRandomUpgrade called");
-        //}
-
         if (!isGameEnd) return;
 
         if (Input.anyKeyDown)

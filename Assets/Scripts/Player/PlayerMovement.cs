@@ -13,14 +13,23 @@ public class PlayerMovement : MonoBehaviour
     public Health health;
     float yVelocity;
 
+    Animator anim;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     void Update()
     {
         float h = Input.GetAxis("Horizontal");
+        anim.SetFloat("MoveSpeed", Mathf.Abs(h));
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            anim.SetTrigger("Throw");
+        }
 
         Vector3 move = Vector3.right * h * speed;
 

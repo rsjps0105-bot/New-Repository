@@ -13,17 +13,10 @@ public class EnemyNormalBall : MonoBehaviour, IThrowable
 
     void Awake()
     {
-        // ★ プレイヤー専用コピー
         runtimeData = Instantiate(originalData);
     }
 
-    void Start()
-    {
-        if (EnemyUpgradeManager.Instance != null)
-        {
-            //EnemyUpgradeManager.Instance.ApplyUpgradesToEnemy(this);
-        }
-    }
+    public EnemyBallData RuntimeData => runtimeData;
 
     void Update()
     {
@@ -41,17 +34,13 @@ public class EnemyNormalBall : MonoBehaviour, IThrowable
     public void AddUpgrade(UpgradeCard card)
     {
         AppliedUpgrades.Add(card);
-        RuntimeData.ApplyUpgrade(card);
+        card.Apply(RuntimeData);
     }
 
     bool CanThrow()
     {
         return Time.time >= lastThrowTime + runtimeData.coolTime;
     }
-
-    public EnemyBallData RuntimeData => runtimeData;
-
-
 
     public void Throw(Vector3 startPosition, Vector3 targetPosition)
     {

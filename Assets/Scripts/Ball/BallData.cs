@@ -22,29 +22,4 @@ public class BallData : ScriptableObject
 
     [Header("Prefab")]
     public Rigidbody ballPrefab;
-
-    // ‹­‰»‚ðŽó‚¯Žæ‚é
-    public void ApplyUpgrade(UpgradeCard card)
-    {
-        switch (card.type)
-        {
-            case UpgradeType.SpeedUp:
-                baseSpeed *= card.value;
-                baseSpeed = Mathf.Clamp(baseSpeed, minSpeed, maxSpeed);
-                break;
-
-            case UpgradeType.ExtraHorizontalShot:
-                extraHorizontalShots += Mathf.RoundToInt(card.value);
-                break;
-
-            case UpgradeType.Homing:
-                homingStrength += card.value;
-                break;
-
-            case UpgradeType.CoolTimeDown:
-                coolTime -= card.value;
-                coolTime = Mathf.Clamp(coolTime, minCoolTime, maxCoolTime);
-                break;
-        }
-    }
 }

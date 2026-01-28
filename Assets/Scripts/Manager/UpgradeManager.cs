@@ -26,7 +26,7 @@ public class UpgradeManager : MonoBehaviour
     void OnUpgradeSelected(UpgradeCard card)
     {
         BallData data = normalBall.RuntimeData;
-        data.ApplyUpgrade(card);
+        card.Apply(data);
 
         Debug.Log($"[Upgrade Selected] {card.title}");
 
