@@ -1,6 +1,7 @@
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,8 +10,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] UpgradeManager upgradeManager;
 
     [Header("UI")]
-    [SerializeField] Text resultText;
     [SerializeField] Text killCountText;   //  èÌéûï\é¶óp
+    [SerializeField] GameObject ResultPanel;
+    [SerializeField] TextMeshProUGUI resultText;
+    [SerializeField] TextMeshProUGUI pressText;
 
     bool isGameEnd = false;
     int killCount = 0;
@@ -28,6 +31,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
 
         resultText.gameObject.SetActive(false);
+        pressText.gameObject.SetActive(false);
 
         killCount = 0;
         UpdateKillText();
@@ -37,7 +41,7 @@ public class GameManager : MonoBehaviour
     {
         if (!isGameEnd) return;
 
-        if (Input.anyKeyDown)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             GoTitle();
         }
@@ -81,8 +85,11 @@ public class GameManager : MonoBehaviour
         isGameEnd = true;
         Time.timeScale = 0f;
 
-        resultText.text = $"YOU LOSE\n{killCount} ëÃì|ÇµÇΩ";
+        ResultPanel.SetActive(true);
+        resultText.text = $"{killCount} enemies defeated";
         resultText.gameObject.SetActive(true);
+        pressText.text = "Press to Title";
+        pressText.gameObject.SetActive(true);
     }
 
     void UpdateKillText()

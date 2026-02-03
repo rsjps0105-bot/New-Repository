@@ -45,6 +45,15 @@ public class Health : MonoBehaviour
     void Die(DamageSource source)
     {
         GameManager.Instance.OnCharacterDead(this, source);
+
+        if (CompareTag("Player"))
+        {
+            //操作や当たり判定だけ止める（必要なら）
+            // GetComponent<PlayerMovement>()?.enabled = false;
+            //GetComponent<Collider>()?.enabled = false;
+            return;
+        }
+
         Destroy(gameObject);
     }
 }
